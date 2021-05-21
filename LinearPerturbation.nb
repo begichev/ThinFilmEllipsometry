@@ -1,0 +1,547 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     20256,        539]
+NotebookOptionsPosition[     18756,        505]
+NotebookOutlinePosition[     19089,        520]
+CellTagsIndexPosition[     19046,        517]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"u", "=", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"v", "=", "ns"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Mg", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Cos", "[", "\[Phi]", "]"}], ",", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"-", "I"}], "n"], 
+        RowBox[{"Sin", "[", "\[Phi]", "]"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "n", " ", 
+        RowBox[{"Sin", "[", "\[Phi]", "]"}]}], ",", 
+       RowBox[{"Cos", "[", "\[Phi]", "]"}]}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"u0", ",", "v0"}], "}"}], "=", 
+   RowBox[{"Mg", ".", 
+    RowBox[{"{", 
+     RowBox[{"u", ",", "v"}], "}"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", " ", "=", " ", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"u0", "-", "v0"}], 
+     RowBox[{"u0", "+", "v0"}]], " ", 
+    RowBox[{"Exp", "[", 
+     RowBox[{
+      RowBox[{"-", "2"}], " ", "I", " ", 
+      FractionBox["\[Phi]", "n"]}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r0", "=", 
+   FractionBox[
+    RowBox[{"1", "-", "ns"}], 
+    RowBox[{"1", "+", "ns"}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Series", "[", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"(", 
+     RowBox[{"r", "-", "r0"}], ")"}], "r0"], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Phi]", ",", "0", ",", "1"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.830230236538074*^9, 3.830230389333693*^9}, {
+  3.830230497038953*^9, 3.830230505062626*^9}, {3.83059519978999*^9, 
+  3.830595222163352*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"91702d5c-a533-4513-8142-1fbfe2894c0a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{"-", 
+    FractionBox[
+     RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", 
+        SuperscriptBox["n", "2"]}], ")"}], " ", "\[Phi]"}], 
+     RowBox[{"n", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "+", "ns"}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{"1", "+", "ns"}], ")"}]}]]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Phi]", "]"}], "2"],
+    SeriesData[$CellContext`\[Phi], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Phi], 0, {
+   Complex[0, -2] $CellContext`n^(-1) (-1 + $CellContext`n^2) (-1 + \
+$CellContext`ns)^(-1)/(1 + $CellContext`ns)}, 1, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.830230391797874*^9, 3.830230505602685*^9, 
+  3.830260397633398*^9, 3.830595224691155*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"80007af2-4d44-42cd-a602-655480eb7386"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"M1", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Cos", "[", "\[Phi]1", "]"}], ",", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"-", "I"}], "n1"], 
+        RowBox[{"Sin", "[", "\[Phi]1", "]"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "I"}], " ", "n1", " ", 
+        RowBox[{"Sin", "[", "\[Phi]1", "]"}]}], ",", 
+       RowBox[{"Cos", "[", "\[Phi]1", "]"}]}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"u1", ",", "v1"}], "}"}], " ", "=", " ", 
+   RowBox[{"M1", ".", 
+    RowBox[{"{", 
+     RowBox[{"u", ",", "v"}], "}"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"u0", ",", "v0"}], "}"}], "=", " ", 
+   RowBox[{"Mg", ".", 
+    RowBox[{"{", 
+     RowBox[{"u1", ",", "v1"}], "}"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r", " ", "=", " ", 
+   FractionBox[
+    RowBox[{"u0", "-", "v0"}], 
+    RowBox[{"u0", "+", "v0"}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r0", "=", 
+   FractionBox[
+    RowBox[{"1", "-", "ns"}], 
+    RowBox[{"1", "+", "ns"}]]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"r1", " ", "=", " ", 
+   FractionBox[
+    RowBox[{"u1", "-", "v1"}], 
+    RowBox[{"u1", "+", "v1"}]]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.830230660621641*^9, 3.8302306784697237`*^9}, {
+   3.830230734373811*^9, 3.8302308774008017`*^9}, 3.830230965073792*^9},
+ CellLabel->"In[9]:=",ExpressionUUID->"bc8c09ee-e0da-4441-a02c-aef28144a50d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GrApprox", " ", "=", " ", 
+  RowBox[{"Series", "[", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"(", 
+      RowBox[{"r", "-", "r1"}], ")"}], "r1"], ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Phi]", ",", "0", ",", "1"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.830230882245595*^9, 3.830230926790801*^9}, {
+  3.830230992562315*^9, 3.83023100376828*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"df4fbb11-80ef-4d0f-89de-b91622e3e6cf"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"2", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"\[ImaginaryI]", " ", 
+         SuperscriptBox["n", "2"], " ", 
+         SuperscriptBox["n1", "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"Cos", "[", "\[Phi]1", "]"}], "2"]}], "-", 
+        RowBox[{"\[ImaginaryI]", " ", 
+         SuperscriptBox["n1", "2"], " ", 
+         SuperscriptBox["ns", "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"Cos", "[", "\[Phi]1", "]"}], "2"]}], "+", 
+        RowBox[{"2", " ", 
+         SuperscriptBox["n", "2"], " ", "n1", " ", "ns", " ", 
+         RowBox[{"Cos", "[", "\[Phi]1", "]"}], " ", 
+         RowBox[{"Sin", "[", "\[Phi]1", "]"}]}], "-", 
+        RowBox[{"2", " ", 
+         SuperscriptBox["n1", "3"], " ", "ns", " ", 
+         RowBox[{"Cos", "[", "\[Phi]1", "]"}], " ", 
+         RowBox[{"Sin", "[", "\[Phi]1", "]"}]}], "+", 
+        RowBox[{"\[ImaginaryI]", " ", 
+         SuperscriptBox["n1", "4"], " ", 
+         SuperscriptBox[
+          RowBox[{"Sin", "[", "\[Phi]1", "]"}], "2"]}], "-", 
+        RowBox[{"\[ImaginaryI]", " ", 
+         SuperscriptBox["n", "2"], " ", 
+         SuperscriptBox["ns", "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"Sin", "[", "\[Phi]1", "]"}], "2"]}]}], ")"}], " ", 
+      "\[Phi]"}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"n", " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "\[ImaginaryI]"}], " ", "n1", " ", 
+         RowBox[{"Cos", "[", "\[Phi]1", "]"}]}], "+", 
+        RowBox[{"\[ImaginaryI]", " ", "n1", " ", "ns", " ", 
+         RowBox[{"Cos", "[", "\[Phi]1", "]"}]}], "+", 
+        RowBox[{
+         SuperscriptBox["n1", "2"], " ", 
+         RowBox[{"Sin", "[", "\[Phi]1", "]"}]}], "-", 
+        RowBox[{"ns", " ", 
+         RowBox[{"Sin", "[", "\[Phi]1", "]"}]}]}], ")"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"\[ImaginaryI]", " ", "n1", " ", 
+         RowBox[{"Cos", "[", "\[Phi]1", "]"}]}], "+", 
+        RowBox[{"\[ImaginaryI]", " ", "n1", " ", "ns", " ", 
+         RowBox[{"Cos", "[", "\[Phi]1", "]"}]}], "+", 
+        RowBox[{
+         SuperscriptBox["n1", "2"], " ", 
+         RowBox[{"Sin", "[", "\[Phi]1", "]"}]}], "+", 
+        RowBox[{"ns", " ", 
+         RowBox[{"Sin", "[", "\[Phi]1", "]"}]}]}], ")"}]}], ")"}]}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Phi]", "]"}], "2"],
+    SeriesData[$CellContext`\[Phi], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Phi], 0, {
+   2 $CellContext`n^(-1) (
+      Complex[0, -1] $CellContext`n1 Cos[$CellContext`\[Phi]1] + 
+      Complex[0, 1] $CellContext`n1 $CellContext`ns 
+       Cos[$CellContext`\[Phi]1] + $CellContext`n1^2 
+       Sin[$CellContext`\[Phi]1] - $CellContext`ns 
+      Sin[$CellContext`\[Phi]1])^(-1) (
+      Complex[0, 1] $CellContext`n1 Cos[$CellContext`\[Phi]1] + 
+      Complex[0, 1] $CellContext`n1 $CellContext`ns 
+       Cos[$CellContext`\[Phi]1] + $CellContext`n1^2 
+       Sin[$CellContext`\[Phi]1] + $CellContext`ns 
+       Sin[$CellContext`\[Phi]1])^(-1) (
+     Complex[0, 1] $CellContext`n^2 $CellContext`n1^2 
+      Cos[$CellContext`\[Phi]1]^2 + 
+     Complex[0, -1] $CellContext`n1^2 $CellContext`ns^2 
+      Cos[$CellContext`\[Phi]1]^2 + 
+     2 $CellContext`n^2 $CellContext`n1 $CellContext`ns 
+      Cos[$CellContext`\[Phi]1] Sin[$CellContext`\[Phi]1] - 
+     2 $CellContext`n1^3 $CellContext`ns Cos[$CellContext`\[Phi]1] 
+     Sin[$CellContext`\[Phi]1] + 
+     Complex[0, 1] $CellContext`n1^4 Sin[$CellContext`\[Phi]1]^2 + 
+     Complex[0, -1] $CellContext`n^2 $CellContext`ns^2 
+      Sin[$CellContext`\[Phi]1]^2)}, 1, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.830230900510934*^9, 3.830230927126709*^9}, 
+   3.83023096854984*^9, 3.830231004617478*^9, 3.830260405546624*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"13ebd72c-9d7d-4458-b60f-55e39d3a4e20"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"hBNApprox", " ", "=", " ", 
+  RowBox[{"Series", "[", 
+   RowBox[{"GrApprox", ",", 
+    RowBox[{"{", 
+     RowBox[{"\[Phi]1", ",", "0", ",", "1"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.830231006721986*^9, 3.830231025615993*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"568c5b7e-fdd9-43c4-bd61-12af38166847"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     InterpretationBox[
+      RowBox[{
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{"2", " ", "\[ImaginaryI]", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            SuperscriptBox["n", "2"], "-", 
+            SuperscriptBox["ns", "2"]}], ")"}]}], 
+         RowBox[{"n", " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "ns"}], ")"}], " ", 
+          RowBox[{"(", 
+           RowBox[{"1", "+", "ns"}], ")"}]}]]}], "+", 
+       FractionBox[
+        RowBox[{"4", " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"-", 
+             SuperscriptBox["n1", "2"]}], " ", "ns"}], "+", 
+           RowBox[{
+            SuperscriptBox["n", "2"], " ", 
+            SuperscriptBox["n1", "2"], " ", "ns"}], "+", 
+           SuperscriptBox["ns", "3"], "-", 
+           RowBox[{
+            SuperscriptBox["n", "2"], " ", 
+            SuperscriptBox["ns", "3"]}]}], ")"}], " ", "\[Phi]1"}], 
+        RowBox[{"n", " ", "n1", " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"-", "1"}], "+", "ns"}], ")"}], "2"], " ", 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"1", "+", "ns"}], ")"}], "2"]}]], "+", 
+       InterpretationBox[
+        SuperscriptBox[
+         RowBox[{"O", "[", "\[Phi]1", "]"}], "2"],
+        SeriesData[$CellContext`\[Phi]1, 0, {}, 0, 2, 1],
+        Editable->False]}],
+      SeriesData[$CellContext`\[Phi]1, 0, {
+       Complex[0, -2] $CellContext`n^(-1) (-1 + $CellContext`ns)^(-1) (
+          1 + $CellContext`ns)^(-1) ($CellContext`n^2 - $CellContext`ns^2), 
+        4 $CellContext`n^(-1) $CellContext`n1^(-1) (-1 + \
+$CellContext`ns)^(-2) (
+          1 + $CellContext`ns)^(-2) (-$CellContext`n1^2 $CellContext`ns + \
+$CellContext`n^2 $CellContext`n1^2 $CellContext`ns + $CellContext`ns^3 - \
+$CellContext`n^2 $CellContext`ns^3)}, 0, 2, 1],
+      Editable->False], ")"}], " ", "\[Phi]"}], "+", 
+   InterpretationBox[
+    SuperscriptBox[
+     RowBox[{"O", "[", "\[Phi]", "]"}], "2"],
+    SeriesData[$CellContext`\[Phi], 0, {}, 1, 2, 1],
+    Editable->False]}],
+  SeriesData[$CellContext`\[Phi], 0, {
+    SeriesData[$CellContext`\[Phi]1, 0, {
+     Complex[0, -2] $CellContext`n^(-1) (-1 + $CellContext`ns)^(-1) (
+        1 + $CellContext`ns)^(-1) ($CellContext`n^2 - $CellContext`ns^2), 
+      4 $CellContext`n^(-1) $CellContext`n1^(-1) (-1 + $CellContext`ns)^(-2) (
+        1 + $CellContext`ns)^(-2) (-$CellContext`n1^2 $CellContext`ns + \
+$CellContext`n^2 $CellContext`n1^2 $CellContext`ns + $CellContext`ns^3 - \
+$CellContext`n^2 $CellContext`ns^3)}, 0, 2, 1]}, 1, 2, 1],
+  Editable->False]], "Output",
+ CellChangeTimes->{3.830231026247405*^9, 3.830260408389556*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"b0d343b2-f318-4aac-8e24-0f590a50eb62"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.83023098531041*^9, 
+  3.830230990492375*^9}},ExpressionUUID->"17b67848-b10f-4043-9400-\
+c32c9c2b6981"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TeXForm", "@", "hBNApprox"}]], "Input",
+ CellChangeTimes->{{3.83023246823834*^9, 3.830232484888338*^9}, {
+  3.830232646329146*^9, 3.830232646508531*^9}, {3.830260381902927*^9, 
+  3.8302604145001993`*^9}},
+ CellLabel->"In[18]:=",ExpressionUUID->"4c39bbd8-cbbe-4949-a4e8-2a09bf668de7"],
+
+Cell["\<\
+\\phi  \\left(-\\frac{2 i \\left(n^2-\\text{ns}^2\\right)}{n (\\text{ns}-1)
+   (\\text{ns}+1)}+\\frac{4 \\left(-n^2 \\text{ns}^3+\\text{ns}^3+n^2 \
+\\text{n1}^2
+   \\text{ns}-\\text{n1}^2 \\text{ns}\\right) \\text{$\\phi $1}}{n \\text{n1}
+   (\\text{ns}-1)^2 (\\text{ns}+1)^2}+O\\left(\\text{$\\phi
+   $1}^2\\right)\\right)+O\\left(\\phi ^2\\right)\
+\>", "Output",
+ CellChangeTimes->{{3.830260392818108*^9, 3.830260415427401*^9}},
+ CellLabel->
+  "Out[18]//TeXForm=",ExpressionUUID->"89056e2a-3fe7-41a6-a17a-9bc8af4bac8e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TeXForm", "[", 
+  InterpretationBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"2", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\[ImaginaryI]", " ", 
+          SuperscriptBox["n", "2"], " ", 
+          SuperscriptBox["n1", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "\[Phi]1", "]"}], "2"]}], "-", 
+         RowBox[{"\[ImaginaryI]", " ", 
+          SuperscriptBox["n1", "2"], " ", 
+          SuperscriptBox["ns", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", "\[Phi]1", "]"}], "2"]}], "+", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["n", "2"], " ", "n1", " ", "ns", " ", 
+          RowBox[{"Cos", "[", "\[Phi]1", "]"}], " ", 
+          RowBox[{"Sin", "[", "\[Phi]1", "]"}]}], "-", 
+         RowBox[{"2", " ", 
+          SuperscriptBox["n1", "3"], " ", "ns", " ", 
+          RowBox[{"Cos", "[", "\[Phi]1", "]"}], " ", 
+          RowBox[{"Sin", "[", "\[Phi]1", "]"}]}], "+", 
+         RowBox[{"\[ImaginaryI]", " ", 
+          SuperscriptBox["n1", "4"], " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Phi]1", "]"}], "2"]}], "-", 
+         RowBox[{"\[ImaginaryI]", " ", 
+          SuperscriptBox["n", "2"], " ", 
+          SuperscriptBox["ns", "2"], " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Phi]1", "]"}], "2"]}]}], ")"}], " ", 
+       "\[Phi]"}], ")"}], "/", 
+     RowBox[{"(", 
+      RowBox[{"n", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"-", "\[ImaginaryI]"}], " ", "n1", " ", 
+          RowBox[{"Cos", "[", "\[Phi]1", "]"}]}], "+", 
+         RowBox[{"\[ImaginaryI]", " ", "n1", " ", "ns", " ", 
+          RowBox[{"Cos", "[", "\[Phi]1", "]"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["n1", "2"], " ", 
+          RowBox[{"Sin", "[", "\[Phi]1", "]"}]}], "-", 
+         RowBox[{"ns", " ", 
+          RowBox[{"Sin", "[", "\[Phi]1", "]"}]}]}], ")"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"\[ImaginaryI]", " ", "n1", " ", 
+          RowBox[{"Cos", "[", "\[Phi]1", "]"}]}], "+", 
+         RowBox[{"\[ImaginaryI]", " ", "n1", " ", "ns", " ", 
+          RowBox[{"Cos", "[", "\[Phi]1", "]"}]}], "+", 
+         RowBox[{
+          SuperscriptBox["n1", "2"], " ", 
+          RowBox[{"Sin", "[", "\[Phi]1", "]"}]}], "+", 
+         RowBox[{"ns", " ", 
+          RowBox[{"Sin", "[", "\[Phi]1", "]"}]}]}], ")"}]}], ")"}]}], "+", 
+    InterpretationBox[
+     SuperscriptBox[
+      RowBox[{"O", "[", "\[Phi]", "]"}], "2"],
+     SeriesData[$CellContext`\[Phi], 0, {}, 1, 2, 1],
+     Editable->False]}],
+   SeriesData[$CellContext`\[Phi], 0, {
+    2 $CellContext`n^(-1) (
+       Complex[0, -1] $CellContext`n1 Cos[$CellContext`\[Phi]1] + 
+       Complex[0, 1] $CellContext`n1 $CellContext`ns 
+        Cos[$CellContext`\[Phi]1] + $CellContext`n1^2 
+        Sin[$CellContext`\[Phi]1] - $CellContext`ns 
+       Sin[$CellContext`\[Phi]1])^(-1) (
+       Complex[0, 1] $CellContext`n1 Cos[$CellContext`\[Phi]1] + 
+       Complex[0, 1] $CellContext`n1 $CellContext`ns 
+        Cos[$CellContext`\[Phi]1] + $CellContext`n1^2 
+        Sin[$CellContext`\[Phi]1] + $CellContext`ns 
+        Sin[$CellContext`\[Phi]1])^(-1) (
+      Complex[0, 1] $CellContext`n^2 $CellContext`n1^2 
+       Cos[$CellContext`\[Phi]1]^2 + 
+      Complex[0, -1] $CellContext`n1^2 $CellContext`ns^2 
+       Cos[$CellContext`\[Phi]1]^2 + 
+      2 $CellContext`n^2 $CellContext`n1 $CellContext`ns 
+       Cos[$CellContext`\[Phi]1] Sin[$CellContext`\[Phi]1] - 
+      2 $CellContext`n1^3 $CellContext`ns Cos[$CellContext`\[Phi]1] 
+      Sin[$CellContext`\[Phi]1] + 
+      Complex[0, 1] $CellContext`n1^4 Sin[$CellContext`\[Phi]1]^2 + 
+      Complex[0, -1] $CellContext`n^2 $CellContext`ns^2 
+       Sin[$CellContext`\[Phi]1]^2)}, 1, 2, 1],
+   Editable->False], "]"}]], "Input",
+ CellChangeTimes->{{3.8302326556278343`*^9, 3.830232656043985*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"084dba4a-0631-4637-bea6-51b1af879b14"],
+
+Cell["\<\
+\\frac{2 \\phi  \\left(i n^2 \\text{n1}^2 \\cos ^2(\\text{$\\phi $1})+2 n^2 \
+\\text{n1}
+   \\text{ns} \\sin (\\text{$\\phi $1}) \\cos (\\text{$\\phi $1})-i n^2 \
+\\text{ns}^2 \\sin
+   ^2(\\text{$\\phi $1})+i \\text{n1}^4 \\sin ^2(\\text{$\\phi $1})-2 \
+\\text{n1}^3
+   \\text{ns} \\sin (\\text{$\\phi $1}) \\cos (\\text{$\\phi $1})-i \
+\\text{n1}^2
+   \\text{ns}^2 \\cos ^2(\\text{$\\phi $1})\\right)}{n \\left(\\text{n1}^2 \
+\\sin
+   (\\text{$\\phi $1})+i \\text{n1} \\text{ns} \\cos (\\text{$\\phi $1})-i \
+\\text{n1} \\cos
+   (\\text{$\\phi $1})-\\text{ns} \\sin (\\text{$\\phi $1})\\right) \
+\\left(\\text{n1}^2
+   \\sin (\\text{$\\phi $1})+i \\text{n1} \\text{ns} \\cos (\\text{$\\phi \
+$1})+i \\text{n1}
+   \\cos (\\text{$\\phi $1})+\\text{ns} \\sin (\\text{$\\phi \
+$1})\\right)}+O\\left(\\phi
+   ^2\\right)\
+\>", "Output",
+ CellChangeTimes->{3.8302326566193247`*^9},
+ CellLabel->
+  "Out[36]//TeXForm=",ExpressionUUID->"77ca079b-294f-4bf9-8bf6-b5cacd5c239e"]
+}, Open  ]]
+},
+WindowSize->{808, 621},
+WindowMargins->{{Automatic, 0}, {Automatic, 60}},
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1776, 55, 241, "Input",ExpressionUUID->"91702d5c-a533-4513-8142-1fbfe2894c0a"],
+Cell[2359, 79, 990, 27, 95, "Output",ExpressionUUID->"80007af2-4d44-42cd-a602-655480eb7386"]
+}, Open  ]],
+Cell[3364, 109, 1622, 50, 218, "Input",ExpressionUUID->"bc8c09ee-e0da-4441-a02c-aef28144a50d"],
+Cell[CellGroupData[{
+Cell[5011, 163, 460, 11, 49, "Input",ExpressionUUID->"df4fbb11-80ef-4d0f-89de-b91622e3e6cf"],
+Cell[5474, 176, 3943, 92, 121, "Output",ExpressionUUID->"13ebd72c-9d7d-4458-b60f-55e39d3a4e20"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9454, 273, 343, 7, 31, "Input",ExpressionUUID->"568c5b7e-fdd9-43c4-bd61-12af38166847"],
+Cell[9800, 282, 2895, 71, 64, "Output",ExpressionUUID->"b0d343b2-f318-4aac-8e24-0f590a50eb62"]
+}, Open  ]],
+Cell[12710, 356, 151, 3, 31, "Input",ExpressionUUID->"17b67848-b10f-4043-9400-c32c9c2b6981"],
+Cell[CellGroupData[{
+Cell[12886, 363, 307, 5, 31, "Input",ExpressionUUID->"4c39bbd8-cbbe-4949-a4e8-2a09bf668de7"],
+Cell[13196, 370, 531, 10, 126, "Output",ExpressionUUID->"89056e2a-3fe7-41a6-a17a-9bc8af4bac8e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13764, 385, 3997, 92, 159, "Input",ExpressionUUID->"084dba4a-0631-4637-bea6-51b1af879b14"],
+Cell[17764, 479, 976, 23, 221, "Output",ExpressionUUID->"77ca079b-294f-4bf9-8bf6-b5cacd5c239e"]
+}, Open  ]]
+}
+]
+*)
+
